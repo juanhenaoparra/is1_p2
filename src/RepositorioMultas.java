@@ -15,4 +15,17 @@ public class RepositorioMultas {
 
         return null;
     }
+
+    public void actualizarCiudadano(Ciudadano ciudadano) {
+        for (int i = 0; i < this.ciudadanos.size(); i++) {
+            Ciudadano tempCiudadano = this.ciudadanos.get(i);
+
+            if(tempCiudadano.getCedula() != ciudadano.getCedula()) {
+                continue;
+            }
+
+            this.ciudadanos.remove(i);
+            this.ciudadanos.add(ciudadano);
+        }
+    }
 }
