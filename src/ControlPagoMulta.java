@@ -1,12 +1,19 @@
 public class ControlPagoMulta {
     private RepositorioMultas repo;
 
-    public void pagarMulta(String cedula, String codigoMulta, double valorPagar, String tipoPago) {
+    public void pagarMulta(String cedula, String codigoMulta, double valorPagar, String tipoPago) throws PagoInvalidoException{
         Ciudadano ciudadano = this.repo.buscarCiudadano(cedula);
         Multa multa = ciudadano.buscarMulta(codigoMulta);
 
-        //Pago pago
+        Pago pago = null;
+        if (tipoPago == "efectivo") {
+            pago = new Efectivo(valorPagar);
+        }
 
-        //multa.Pagar(valorPagar, pago)
+        if (tipoPago == "tarjeta") {
+            pago = new Tarjeta(valorPagar);
+        }
+
+        multa.Pagar(pago);
     }
 }
