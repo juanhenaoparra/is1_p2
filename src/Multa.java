@@ -1,3 +1,10 @@
+
+/**
+ * Descripción de la clase
+ * @author Juan Felipe Cortes, Juan Sebastian Henao 
+ * @version 1.0
+ */
+
 import java.util.ArrayList;
 
 public class Multa {
@@ -32,7 +39,7 @@ public class Multa {
     private double sumarPagos() {
         double total = 0.0;
 
-        for(int i = 0; i < this.pagos.size(); i++) {
+        for (int i = 0; i < this.pagos.size(); i++) {
             total += this.pagos.get(i).getValor();
         }
 
@@ -42,15 +49,15 @@ public class Multa {
     private boolean puedeAbonar(double valor) {
         double total = this.sumarPagos();
 
-        if (total+valor > this.valor) {
+        if (total + valor > this.valor) {
             return false;
         }
 
         return true;
     }
 
-    public void Pagar(Pago pago) throws PagoInvalidoException{
-        if(!this.puedeAbonar(pago.getValor())) {
+    public void Pagar(Pago pago) throws PagoInvalidoException {
+        if (!this.puedeAbonar(pago.getValor())) {
             throw new PagoInvalidoException("no puedes abonar a una deuda ya pagada");
         }
 

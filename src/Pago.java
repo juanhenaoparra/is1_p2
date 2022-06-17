@@ -1,3 +1,9 @@
+/**
+ * Descripción de la clase
+ * 
+ * @author Juan Felipe Cortes, Juan Sebastian Henao
+ * @version 1.0
+ */
 public class Pago {
     private int numero;
     private double valor;
