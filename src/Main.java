@@ -1,3 +1,8 @@
+import control.ControlPagoMulta;
+import control.PagoInvalidoException;
+import control.RepositorioMultas;
+import entities.Ciudadano;
+
 public class Main {
     public static void main(String[] args) throws PagoInvalidoException {
         RepositorioMultas repo1 = new RepositorioMultas();

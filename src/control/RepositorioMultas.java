@@ -1,3 +1,4 @@
+package control;
 
 /**
  * Clase que lleva el control de todos los ciudadanos con sus respectivas multas 
@@ -5,6 +6,8 @@
  * @version 1.0
  */
 import java.util.ArrayList;
+
+import entities.Ciudadano;
 
 public class RepositorioMultas {
     private ArrayList<Ciudadano> ciudadanos = new ArrayList<Ciudadano>();

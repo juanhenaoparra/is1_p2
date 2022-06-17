@@ -1,3 +1,5 @@
+package entities;
+
 /**
  * Objeto que herda los atributos de pago
  * 

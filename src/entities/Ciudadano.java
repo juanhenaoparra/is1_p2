@@ -1,3 +1,4 @@
+package entities;
 
 /**
  * Es la objeto ciudadano que se identifica con los atributos cedula, nombre y puede tener multas 

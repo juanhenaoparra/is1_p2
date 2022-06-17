@@ -1,3 +1,4 @@
+package entities;
 
 /**
  * Objeto multa que tiene un codigo valor y pagos a la multa (se puede pagar en varios pagos),
@@ -7,6 +8,8 @@
  */
 
 import java.util.ArrayList;
+
+import control.PagoInvalidoException;
 
 public class Multa {
     private String codigo;

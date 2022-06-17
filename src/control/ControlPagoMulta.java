@@ -1,3 +1,11 @@
+package control;
+
+import entities.Ciudadano;
+import entities.Efectivo;
+import entities.Multa;
+import entities.Pago;
+import entities.Tarjeta;
+
 /**
  * Clase que tiene el control para pagar las multas de los ciudadanos
  * 

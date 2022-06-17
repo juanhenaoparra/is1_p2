@@ -1,3 +1,5 @@
+package entities;
+
 /**
  * Objeto pago que contiene la informacion principal de un pago, ya sea efectivo
  * o por tarjeta

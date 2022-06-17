@@ -1,3 +1,5 @@
+package control;
+
 /**
  * Maneja el error si se ingresa un pago no valido
  * 
