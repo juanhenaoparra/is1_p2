@@ -1,6 +1,7 @@
 
 /**
- * Descripción de la clase
+ * Objeto multa que tiene un codigo valor y pagos a la multa (se puede pagar en varios pagos),
+ * tiene la funcionalidad de pagar, de verificar si ya esta pagada la multa o si quiere abonar a los pagos
  * @author Juan Felipe Cortes, Juan Sebastian Henao 
  * @version 1.0
  */
@@ -10,7 +11,12 @@ import java.util.ArrayList;
 public class Multa {
     private String codigo;
     private double valor;
-    private ArrayList<Pago> pagos;
+    private ArrayList<Pago> pagos = new ArrayList<Pago>();
+
+    public Multa(String codigo, double valor) {
+        this.codigo = codigo;
+        this.valor = valor;
+    }
 
     public String getCodigo() {
         return codigo;
@@ -36,6 +42,12 @@ public class Multa {
         this.pagos = pagos;
     }
 
+    /**
+     * Genera una suma de todos lo pagos que se le hiceron a la multa
+     * 
+     * @return retorna el total de todos lo pagos echos
+     */
+
     private double sumarPagos() {
         double total = 0.0;
 
@@ -46,6 +58,14 @@ public class Multa {
         return total;
     }
 
+    /**
+     * Verifica si se le puede abonar a la multa
+     * 
+     * @param valor el valor que puede abonar a la multa
+     * @return retorna verdadero si puede abonar dinero a la multa, de lo contrario
+     *         false
+     */
+
     private boolean puedeAbonar(double valor) {
         double total = this.sumarPagos();
 
@@ -55,6 +75,16 @@ public class Multa {
 
         return true;
     }
+
+    /**
+     * Funcion que agrega pago a la multa validando antes que esta ya no esta pagada
+     * en su totalidad
+     * 
+     * @param pago el pago que se efectua al pagar la multa
+     * @throws PagoInvalidoException verifica que el tipo de pago se valido lanza
+     *                               cuando se ingresa un pago invalido, que no sea
+     *                               efectivo o tarjeta
+     */
 
     public void Pagar(Pago pago) throws PagoInvalidoException {
         if (!this.puedeAbonar(pago.getValor())) {

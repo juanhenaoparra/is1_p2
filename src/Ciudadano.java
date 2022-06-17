@@ -1,6 +1,6 @@
 
 /**
- * Descripción de la clase
+ * Es la objeto ciudadano que se identifica con los atributos cedula, nombre y puede tener multas 
  * @author Juan Felipe Cortes, Juan Sebastian Henao 
  * @version 1.0
  */
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Ciudadano {
     private String cedula;
     private String nombre;
-    private ArrayList<Multa> multas;
+    private ArrayList<Multa> multas = new ArrayList<Multa>();
 
     public Ciudadano(String cedula, String nombre) {
         this.cedula = cedula;
@@ -34,7 +34,7 @@ public class Ciudadano {
     }
 
     /**
-     * Descripción del método.
+     * Busca si el ciudadano tiene alguna multa existe
      * 
      * @param codigo el codigo con el que se va a buscar una multa especifica
      * @return si existe la multa devuelve la multa de lo contrario devuelve null
@@ -51,5 +51,10 @@ public class Ciudadano {
         }
 
         return null;
+    }
+
+    public void agregarMulta(String codigo, double valor) {
+        Multa auxMulta = new Multa(codigo, valor);
+        this.multas.add(auxMulta);
     }
 }

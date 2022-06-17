@@ -1,5 +1,6 @@
 /**
- * Descripción de la clase
+ * Objeto pago que contiene la informacion principal de un pago, ya sea efectivo
+ * o por tarjeta
  * 
  * @author Juan Felipe Cortes, Juan Sebastian Henao
  * @version 1.0

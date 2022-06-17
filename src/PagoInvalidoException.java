@@ -1,5 +1,5 @@
 /**
- * Descripción de la clase
+ * Maneja el error si se ingresa un pago no valido
  * 
  * @author Juan Felipe Cortes, Juan Sebastian Henao
  * @version 1.0

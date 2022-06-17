@@ -1,5 +1,5 @@
 /**
- * Descripción de la clase
+ * Clase que tiene el control para pagar las multas de los ciudadanos
  * 
  * @author Juan Felipe Cortes, Juan Sebastian Henao
  * @version 1.0
@@ -8,8 +8,14 @@
 public class ControlPagoMulta {
     private RepositorioMultas repo;
 
+    public ControlPagoMulta(RepositorioMultas repo) {
+        this.repo = repo;
+    }
+
     /**
-     * Descripción del método.
+     * funcion para que el ciudadano a travez de su cedula y el codigo de la multa
+     * pueda pagar la multa con el medio de pago de su preferencia
+     * sea en efectivo o sea por tarjeta
      * 
      * @param cedula      la cedual es la identificacion del ciudadano
      * @param codigoMulta el codigo de la multa que se va a pagar
@@ -28,6 +34,7 @@ public class ControlPagoMulta {
 
         Pago pago = null;
         if (tipoPago.equalsIgnoreCase("efectivo")) {
+            System.out.println("pago: " + valorPagar);
             pago = new Efectivo(valorPagar);
         }
 

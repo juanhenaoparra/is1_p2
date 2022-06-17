@@ -1,5 +1,5 @@
 /**
- * Descripción de la clase
+ * Objeto Efectivo
  * 
  * @author Juan Felipe Cortes, Juan Sebastian Henao
  * @version 1.0

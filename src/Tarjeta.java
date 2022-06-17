@@ -1,5 +1,5 @@
 /**
- * Descripción de la clase
+ * Objeto que herda los atributos de pago
  * 
  * @author Juan Felipe Cortes, Juan Sebastian Henao
  * @version 1.0
